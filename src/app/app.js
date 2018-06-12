@@ -24,8 +24,8 @@ let onServiceSuccess = (data) => {
 	document.getElementById("app").appendChild(lottoTable);
 };
 
-let onServiceError = () => {
-	
+let onServiceError = (errorData, response) => {
+	console.error("Error performing the request", errorData, response);
 };
 
 jQuery(document).ready(init);
