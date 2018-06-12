@@ -6,7 +6,8 @@ class LottoTable extends HTMLElement {
 	
 	setData (data) {
 		// Numbers belong to the header, stats belong to the table itself
-		this.header = data.numbers;
+		this.numbers = data.numbers;
+		this.euroNumbers = data.euroNumbers
 		this.stats = data.stats;
 	}
 };
