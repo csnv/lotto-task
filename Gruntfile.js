@@ -19,8 +19,10 @@ module.exports = function (grunt)
         },
         uglify: {
             vendor: {
-                src: 'src/lib/*.js',
-                dest: 'dist/js/vendor.min.js'
+                files: [{
+                    src: 'src/lib/*.js',
+                    dest: 'dist/js/vendor.min.js'
+                }]
             }
         },
         copy: {
