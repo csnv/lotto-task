@@ -21,7 +21,7 @@ let onServiceSuccess = (data) => {
 		date: data.last.date
 	});
 	
-	document.body.appendChild(lottoTable);
+	document.getElementById("app").appendChild(lottoTable);
 };
 
 let onServiceError = () => {
