@@ -17,8 +17,8 @@ let onServiceSuccess = (data) => {
 		numbers: data.last.numbers,
 		euroNumbers: data.last.euroNumbers,
 		stats: data.last.odds,
-		currency: data.currency,
-		date: data.date
+		currency: data.last.currency,
+		date: data.last.date
 	});
 	
 	document.body.appendChild(lottoTable);

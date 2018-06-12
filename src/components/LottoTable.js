@@ -68,7 +68,6 @@ class LottoTable extends HTMLElement {
 		addRow(this.createTableRow("XI", this.stats.rank11));
 		addRow(this.createTableRow("XII", this.stats.rank12));
 		
-		
 		this.appendChild(table);
 	}
 	
@@ -88,7 +87,7 @@ class LottoTable extends HTMLElement {
 		let winnersTd = document.createElement('td');
 		winnersTd.innerHTML = this.formatLocale(data.winners) + "x";
 		let prizeTd = document.createElement('td');
-		prizeTd.innerHTML = this.formatLocale(data.prize);
+		prizeTd.innerHTML = this.formatLocale(data.prize, true);
 		
 		tr.appendChild(tierTd);
 		tr.appendChild(matchTd);
@@ -98,12 +97,61 @@ class LottoTable extends HTMLElement {
 		return tr;		
 	}
 	
-	getMatchText () {
-		return ""
+	getMatchText (position) {
+		let matchingText;
+		
+		switch(position) {
+			case "I":
+				matchingText = "5 Numbers + 2 Euronumbers";
+				break;
+			case "II":
+				matchingText = "5 Numbers + 1 Euronumber ";
+				break;
+			case "III":
+				matchingText = "5 Numbers + 0 Euronumbers ";
+				break;
+			case "IV":
+				matchingText = "4 Numbers + 2 Euronumbers ";
+				break;
+			case "V":
+				matchingText = "4 Numbers + 1 Euronumber ";
+				break;
+			case "VI":
+				matchingText = "4 Numbers + 0 Euronumber";
+				break;
+			case "VII":
+				matchingText = "3 Numbers + 2 Euronumbers ";
+				break;
+			case "VIII":
+				matchingText = "2 Numbers + 2 Euronumbers";
+				break;
+			case "IX":
+				matchingText = "3 Numbers + 1 Euronumber ";
+				break;
+			case "X":
+				matchingText = "3 Numbers + 0 Euronumbers ";
+				break;
+			case "XI":
+				matchingText = "1 Number + 2 Euronumbers ";
+				break;
+			case "XII":
+				matchingText = "2 Numbers + 1 Euronumber ";
+				break;
+		}
+		
+		return matchingText;
 	}
 	
 	formatLocale (number, currency) {
-		return ""
+		let opt = {};
+		number = currency ? number / 100 : number;
+		
+		if (currency) {
+			opt.style = "currency";
+			opt.currency = "EUR";
+			opt.minimumFractionDigits = 2;
+		}
+		return number.toLocaleString("en-EN", opt);
 	}
 };
 
