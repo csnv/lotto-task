@@ -1,0 +1,9 @@
+{
+    "plugins": [
+        "transform-custom-element-classes",
+        "transform-es2015-classes"
+    ],
+    "presets": [
+        [ "es2015", { "modules": false } ]
+    ]
+}
