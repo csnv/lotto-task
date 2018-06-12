@@ -11,15 +11,14 @@ let init = () => {
 };
 
 let onServiceSuccess = (data) => {
-	// We only need the winner numbers and the statistics of winners
-	let winnerNumbers = data.last.numbers;
-	let winnerEuroNumbers = data.last.euroNumbers;
-	let winnerStats = data.last.odds;
+	// Recollect the data we need in the component
 	
 	let lottoTable = new LottoTable({
-		numbers: winnerNumbers,
-		euroNumbers: winnerEuroNumbers,
-		stats: winnerStats,
+		numbers: data.last.numbers,
+		euroNumbers: data.last.euroNumbers,
+		stats: data.last.odds,
+		currency: data.currency,
+		date: data.date
 	});
 	
 	document.body.appendChild(lottoTable);
