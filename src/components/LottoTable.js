@@ -54,7 +54,7 @@ class LottoTable extends HTMLElement {
 		table.appendChild(this.createTableHeader());
 		
 		let addRow = (row) => table.appendChild(row);
-		// We always expect 10 results
+		// We always expect 12 results
 		addRow(this.createTableRow("I", this.stats.rank1));
 		addRow(this.createTableRow("II", this.stats.rank2));
 		addRow(this.createTableRow("III", this.stats.rank3));
@@ -148,7 +148,7 @@ class LottoTable extends HTMLElement {
 		
 		if (currency) {
 			opt.style = "currency";
-			opt.currency = "EUR";
+			opt.currency = this.currency;
 			opt.minimumFractionDigits = 2;
 		}
 		return number.toLocaleString("en-EN", opt);
