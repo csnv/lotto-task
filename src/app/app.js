@@ -13,15 +13,15 @@ let init = () => {
 let onServiceSuccess = (data) => {
 	// Recollect the data we need in the component
 	
-	let lottoTable = new LottoTable({
-		numbers: data.last.numbers,
-		euroNumbers: data.last.euroNumbers,
-		stats: data.last.odds,
-		currency: data.last.currency,
-		date: data.last.date
-	});
-	
-	document.getElementById("app").appendChild(lottoTable);
+	// let lottoTable = new LottoTable({
+	// 	numbers: data.last.numbers,
+	// 	euroNumbers: data.last.euroNumbers,
+	// 	stats: data.last.odds,
+	// 	currency: data.last.currency,
+	// 	date: data.last.date
+	// });
+	// 
+	// document.getElementById("app").appendChild(lottoTable);
 };
 
 let onServiceError = (errorData, response) => {
