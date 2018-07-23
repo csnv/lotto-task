@@ -11,17 +11,16 @@ let init = () => {
 };
 
 let onServiceSuccess = (data) => {
-	// Recollect the data we need in the component
+	let lottoTable = document.getElementById("ranks");
+	lottoTable.data = data.last.odds;
+	lottoTable.render();
 	
-	// let lottoTable = new LottoTable({
-	// 	numbers: data.last.numbers,
-	// 	euroNumbers: data.last.euroNumbers,
-	// 	stats: data.last.odds,
-	// 	currency: data.last.currency,
-	// 	date: data.last.date
-	// });
-	// 
-	// document.getElementById("app").appendChild(lottoTable);
+	let lottoNumbers = document.getElementById("numbers");
+	lottoNumbers.data = {
+		numbers: data.last.numbers,
+		euroNumbers: data.last.euroNumbers
+	};
+	lottoNumbers.render();
 };
 
 let onServiceError = (errorData, response) => {

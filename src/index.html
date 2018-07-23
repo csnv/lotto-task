@@ -10,33 +10,65 @@
 	</head>
 	<body>
 		<div id="app">
-			<lotto-table>
+			<lotto-numbers id="numbers">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="euro"></span>
+				<span class="euro"></span>
+			</lotto-numbers>
+			<lotto-table id="ranks">
 				<table>
 					<thead>
-						<th>
-							
-						</th>
+						<th>Tier</th><th>Match</th><th>Winners</th><th>Amount</th>
 					</thead>
 					<tbody>
-						<tr data-src="test">
-							<td>
-								
-							</td>
-							<td>
-								
-							</td>
-							<td>
-								
-							</td>
-							<td>
-								
-							</td>
+						<tr data-src="rank1">
+							<td>I</td><td>5 Numbers + 2 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank2">
+							<td>II</td><td>5 Numbers + 1 Euronumber</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank3">
+							<td>III</td><td>5 Numbers + 0 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank4">
+							<td>IV</td><td>4 Numbers + 2 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank5">
+							<td>V</td><td>4 Numbers + 1 Euronumber</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank6">
+							<td>VI</td><td>4 Numbers + 0 Euronumber</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank7">
+							<td>VI</td><td>3 Numbers + 2 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank8">
+							<td>VII</td><td>2 Numbers + 2 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank9">
+							<td>VIII</td><td>3 Numbers + 1 Euronumber</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank10">
+							<td>IX</td><td>1 Number + 2 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank11">
+							<td>X</td><td>2 Numbers + 1 Euronumber</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank12">
+							<td>XI</td><td>5 Numbers + 2 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
+						</tr>
+						<tr data-src="rank12">
+							<td>XII</td><td>5 Numbers + 2 Euronumbers</td><td>{{val}}x</td><td>€{{val}}</td>
 						</tr>
 					</tbody>
 				</table>
 			</lotto-table>
 		</div>
-		
+		<script type="text/javascript" src="js/LottoNumbers.js"></script>
 		<script type="text/javascript" src="js/LottoTable.js"></script>
 	</body>
 </html>

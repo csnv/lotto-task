@@ -8,7 +8,7 @@ body {
 	margin: 0 auto;
 }
 
-lotto-table .header span {
+lotto-numbers span {
 	display: inline-block;
 	font-size: 17px;
 	width: 35px;
@@ -21,7 +21,7 @@ lotto-table .header span {
 	margin-bottom: 7px;
 }
 
-lotto-table .header span.euro {
+lotto-numbers span.euro {
 	border: 1px solid #ca7f26;
 }
 
