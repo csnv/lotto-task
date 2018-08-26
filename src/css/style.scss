@@ -1,0 +1,101 @@
+// CSS variables
+$primaryColor: #a4cc25;
+$secondaryColor: #a4cc25;
+$backgroundColor: #fdfdfd;
+$foregroundColor: #fff;
+$fontSize: 14px;
+$fontFamily: sans-serif, droid-sans, arial, Tahoma;
+$euroNumberBorder: #ca7f26;
+$titleTextColor: #d9deda;
+$titleFontWeight: 600;
+$mainWidth: 530px;
+
+// Main styles
+body { 
+	background: $backgroundColor;
+	font-size: $fontSize;
+	font-family: $fontFamily;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: $primaryColor linear-gradient(90deg, $primaryColor, $secondaryColor);
+	width: 100%;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	padding: 10px 25px;
+	
+	span.title {
+		font-size: 20px;
+		font-weight: 700;
+		color: #fff;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	}
+}
+
+#container {
+	max-width: $mainWidth;
+	background: $foregroundColor;
+	margin: 15px auto;
+	padding: 15px;
+	border: 1px solid #ddd;
+	box-shadow:  0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+lotto-numbers {
+	span {
+		display: inline-block;
+		font-size: 17px;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		border: 1px solid $titleTextColor;
+		border-radius: 50%;
+		margin-right: 7px;
+		margin-bottom: 7px;
+		
+		&.euro {
+			border: 1px solid $euroNumberBorder;
+		}
+	}
+}
+
+lotto-table {
+	table {
+		background-color: transparent;
+		font-size: 14px;
+		margin-bottom: 21px;
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		box-sizing: border-box;
+		
+		thead {
+			border: 1px solid $titleTextColor;
+			display: table-header-group;
+			line-height: 1;
+			
+			th {
+				font-weight: $titleFontWeight;
+				padding: 14px 21px;
+				text-align: left;
+			}
+		}
+		
+		tr {
+			border: 1px solid $titleTextColor;
+			
+			td {
+				display: table-cell;
+				line-height: 1;
+				padding: 14px 21px;
+				border: none;
+				font-weight: 200;
+				min-height: 35px;
+				position: relative;
+			}
+		}
+	}
+}
