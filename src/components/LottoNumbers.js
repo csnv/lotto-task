@@ -22,7 +22,7 @@
 		render () {
 			let ordinalList = this.querySelectorAll("span:not(.euro)");
 			let euroList = this.querySelectorAll("span.euro");
-			
+			 
 			ordinalList.forEach(this.iteratorCheckFn(COMMON_NUMBERS));
 			euroList.forEach(this.iteratorCheckFn(EURO_NUMBERS));
 		}
